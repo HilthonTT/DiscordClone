@@ -1,12 +1,12 @@
 import { NextApiRequest } from "next";
 
 import { currentProfilePages } from "@/lib/current-profile-pages";
-import { NextApiResonseServerIo } from "@/types";
+import { NextApiResponseServerIo } from "@/types";
 import { db } from "@/lib/db";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResonseServerIo
+  res: NextApiResponseServerIo
 ) {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
